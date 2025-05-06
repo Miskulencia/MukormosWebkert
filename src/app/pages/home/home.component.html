@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="home">
   <h1>Üdvözöljük az Időpontfoglalás oldalon!</h1>
   <div class="gallery-container">
@@ -25,3 +26,32 @@
     </div>
   </div>
 </div>
+=======
+<div class="home">
+  <h1>Üdvözöljük az Időpontfoglalás oldalon!</h1>
+  <div class="gallery-container">
+    <!-- Nagy kép -->
+    <div class="selected-image">
+      <img [src]="selectedImage" alt="Selected Image" />
+    </div>
+
+    <!-- Görgethető képlist -->
+    <div class="image-list">
+      <button mat-icon-button (click)="previousPage()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <div class="image-list-content">
+        <img
+          *ngFor="let image of visibleImages"
+          [src]="image"
+          alt="Gallery Image"
+          (click)="selectImage(image)"
+        />
+      </div>
+      <button mat-icon-button (click)="nextPage()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+>>>>>>> master

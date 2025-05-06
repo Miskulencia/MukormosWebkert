@@ -1,0 +1,12 @@
+<div class="username-update">
+  <p><strong>Jelenlegi felhasználónév:</strong> {{ currentUsername }}</p>
+  <p><strong>Email:</strong> {{ email }}</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Új felhasználónév</mat-label>
+    <input matInput [(ngModel)]="newUsername" placeholder="Adja meg az új felhasználónevet" />
+  </mat-form-field>
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="save()">Mentés</button>
+    <button mat-button color="warn" (click)="cancel()">Mégse</button>
+  </div>
+</div>

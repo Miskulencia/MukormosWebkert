@@ -1,0 +1,64 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  color: #d4af37; /* Gold color for text */
+
+  mat-card {
+    padding: 1rem;
+    background-color: rgba(248, 225, 231, 1); /* Solid pink background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &:not(:first-child) {
+      margin-top: 1.5rem; /* Add spacing above cards except the first one */
+    }
+  }
+
+  .username-button-container {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    justify-content: center; /* Center the button */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+  }
+
+  .appointments-list {
+    margin-top: 1rem; /* Add spacing between the bookings list and the box */
+  }
+
+  .username-update {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem; /* Move the username input box further down */
+    padding: 1rem;
+    border: 2px solid #d4af37; /* Add a gold border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+
+    mat-form-field {
+      margin-top: 0.5rem; /* Move the label text further down */
+    }
+
+    mat-label {
+      position: relative; /* Ensure proper positioning */
+      top: 0.5rem; /* Move the label text down */
+      font-size: 1rem; /* Ensure the font size is consistent */
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

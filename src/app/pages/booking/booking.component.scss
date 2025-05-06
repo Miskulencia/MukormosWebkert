@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .booking {
   text-align: center;
   color: #d4af37; /* Arany */
@@ -99,3 +100,106 @@
     }
   }
 }
+=======
+.booking {
+  text-align: center;
+  color: #d4af37; /* Arany */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  .calendar-background {
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: rgba(248, 225, 231, 0.8); /* Halvány fehéres-rózsaszín */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Add spacing between calendar and button */
+  }
+
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 1) 10%, /* White in the center */
+      rgba(248, 225, 231, 0.8) 100% /* Pink at the edges */
+    ); /* Smooth gradient transition from center to all sides */
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 450px; /* Keep the background size fixed */
+    border-radius: 15px; /* Match the border radius of the outer background */
+  }
+
+  mat-calendar {
+    width: 100%; /* Make the calendar take full width of the container */
+    max-width: 300px; /* Increase the calendar width slightly */
+
+    .mat-calendar-body-label {
+      font-size: 1.2rem; /* Increase font size for the month label */
+      font-weight: bold;
+      color: #d4af37; /* Gold color for the month label */
+    }
+
+    .mat-calendar-table-header th {
+      font-size: 1rem; /* Increase font size for day initials */
+      font-weight: bold;
+      color: #333; /* Darker color for better visibility */
+    }
+  }
+
+  .selected-date {
+    background-color: #d4af37 !important; /* Gold color for selected date */
+    color: #000000 !important; /* White text for contrast */
+    border-radius: 50%; /* Circular highlight */
+  }
+
+  .last-clicked-date {
+    background-color: #ffcc00 !important; /* Yellow color for last clicked date */
+    color: #000 !important; /* Black text for contrast */
+    border-radius: 50%; /* Circular highlight */
+  }
+
+  .selected-date-text {
+    margin: 1rem 0; /* Add more spacing around the text */
+    font-size: 1.3rem; /* Increase font size for better readability */
+    color: #d4af37; /* Use black for better contrast */
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Subtle shadow for better visibility */
+  }
+
+  button {
+    background-color: #d4af37; /* Arany */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem; /* Increased padding for better usability */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0; /* Remove extra margin since it's inside the pink box */
+
+    &:hover {
+      background-color: #b8860b; /* Sötétebb arany */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .booking {
+    .calendar-background {
+      padding: 1rem; /* Reduce padding */
+    }
+
+    mat-calendar {
+      max-width: 100%; /* Make calendar full width */
+    }
+
+    button {
+      font-size: 1rem; /* Adjust button font size */
+    }
+  }
+}
+>>>>>>> master
