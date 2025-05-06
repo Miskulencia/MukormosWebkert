@@ -1,0 +1,25 @@
+.username-update {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Increase spacing between elements */
+  padding: 1.5rem;
+  border: 2px solid #d4af37; /* Gold border */
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    color: #d4af37; /* Gold text color */
+  }
+
+  mat-form-field {
+    width: 100%; /* Ensure the input field takes full width */
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 1rem; /* Add spacing between buttons */
+  }
+}

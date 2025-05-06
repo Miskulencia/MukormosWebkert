@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <button mat-button color="primary" routerLink="/" class="navbar-title">Műkörmös</button>
+  </div>
+  <div class="navbar-right">
+    <button mat-icon-button class="menu-button" (click)="toggleMenu()" *ngIf="isMobile">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="dropdown-menu" *ngIf="menuOpen && isMobile">
+      <button mat-button color="accent" routerLink="/rolunk" class="navbar-link">Rólunk</button>
+      <ng-container *ngIf="isLoggedIn; else loginInstead">
+        <button mat-button color="accent" routerLink="/idopontfoglalas" class="navbar-link">Időpontfoglalás</button>
+        <button mat-button color="accent" routerLink="/profil" class="navbar-link">Profil</button>
+        <button mat-button color="accent" (click)="onLogout()" class="navbar-link">Kijelentkezés</button>
+      </ng-container>
+      <ng-template #loginInstead>
+        <button mat-button color="primary" routerLink="/bejelentkezes" class="navbar-link">Bejelentkezés</button>
+      </ng-template>
+    </div>
+    <ng-container *ngIf="!isMobile">
+      <button mat-button color="accent" routerLink="/rolunk" class="navbar-link">Rólunk</button>
+      <ng-container *ngIf="isLoggedIn; else loginInsteadDesktop">
+        <button mat-button color="accent" routerLink="/idopontfoglalas" class="navbar-link">Időpontfoglalás</button>
+        <button mat-button color="accent" routerLink="/profil" class="navbar-link">Profil</button>
+        <button mat-button color="accent" (click)="onLogout()" class="navbar-link">Kijelentkezés</button>
+      </ng-container>
+      <ng-template #loginInsteadDesktop>
+        <button mat-button color="primary" routerLink="/bejelentkezes" class="navbar-link">Bejelentkezés</button>
+      </ng-template>
+    </ng-container>
+  </div>
+</nav>

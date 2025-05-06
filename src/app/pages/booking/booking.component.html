@@ -1,0 +1,23 @@
+<div class="booking">
+  <mat-card>
+    <mat-card-content>
+      <h1>Foglaljon időpontot egyszerűen és gyorsan!</h1>
+      <!-- Styled container for the calendar with background -->
+      <div class="calendar-background">
+        <div class="calendar-container">
+          <mat-calendar
+            [(selected)]="selectedDate"
+            [dateClass]="dateClass"
+            (selectedChange)="onDateSelected($event)"
+            class="selectedDate"></mat-calendar>
+        </div>
+        <!-- Display the currently selected date -->
+        <p *ngIf="selectedDate" class="selected-date-text">
+          Kiválasztott nap: {{ selectedDate | date: 'yyyy. MMMM d.' }}
+        </p>
+        <!-- Add a booking button inside the pink box -->
+        <button mat-raised-button color="primary" (click)="bookAppointment()">Foglalás</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
