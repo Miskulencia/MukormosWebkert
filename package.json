@@ -20,10 +20,10 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
-<<<<<<< HEAD
-=======
+
+    
     "firebase": "^11.6.1",
->>>>>>> master
+
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
@@ -41,8 +41,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
   }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> master
